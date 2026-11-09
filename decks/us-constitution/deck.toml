@@ -1,0 +1,30 @@
+name = "us-constitution"
+description = "Excerpts of the 1787 Constitution and some amendments; public domain text."
+
+[[domains]]
+name = "Structure"
+weight = 15
+
+[[domains]]
+name = "Congress"
+weight = 30
+
+[[domains]]
+name = "President and courts"
+weight = 25
+
+[[domains]]
+name = "Amendments"
+weight = 30
+
+[[sources]]
+path = "sources/preamble.md"
+source_license = "public-domain"
+
+[[sources]]
+path = "sources/articles.md"
+source_license = "public-domain"
+
+[[sources]]
+path = "sources/amendments.md"
+source_license = "public-domain"

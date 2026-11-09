@@ -1,0 +1,10 @@
+.venv/
+out/
+.env
+dist/
+build/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+decks/private/
+*.sqlite

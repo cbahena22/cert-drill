@@ -1,0 +1,349 @@
+{
+  "cost_usd": 0.0,
+  "eval_version": 1,
+  "model_calls": 0,
+  "rows": [
+    {
+      "caught": 35,
+      "code_checkable_caught": 35,
+      "code_checkable_n": 35,
+      "label": "code: the question checker on hand-written planted faults (one fault per question)",
+      "misses": [
+        {
+          "case": "two-right-answers",
+          "caught_by": "blind pass and the learner",
+          "code_said": [
+            "passed"
+          ],
+          "fault": "more-than-one-right-answer",
+          "note": "code checks options are different text, not that only one is right"
+        },
+        {
+          "case": "key-points-at-a-wrong-option",
+          "caught_by": "blind pass and the learner",
+          "code_said": [
+            "passed"
+          ],
+          "fault": "wrong-key",
+          "note": "the citation is real; code cannot tell the key does not match it"
+        },
+        {
+          "case": "citation-real-but-off-topic",
+          "caught_by": "the learner",
+          "code_said": [
+            "passed"
+          ],
+          "fault": "citation-does-not-support-the-key",
+          "note": "code checks the quote exists in the notes, not that it supports the answer"
+        }
+      ],
+      "n": 38,
+      "name": "checker-planted-faults",
+      "result": "35/38 caught"
+    },
+    {
+      "batch_problems": 0,
+      "label": "code: the question checker on the shipped sample questions (should refuse none)",
+      "n": 80,
+      "name": "checker-sample-questions",
+      "refused": 0,
+      "result": "0/80 refused, 0 batch problems"
+    },
+    {
+      "disagreements": [
+        {
+          "case": "addr-paraphrase",
+          "expected_grade": 5,
+          "expected_points": [
+            "met",
+            "met"
+          ],
+          "note": "right, in other words",
+          "stand_in_grade": 1,
+          "stand_in_points": [
+            "partly",
+            "missed"
+          ]
+        },
+        {
+          "case": "addr-gateway-vague",
+          "expected_grade": 1,
+          "expected_points": [
+            "missed",
+            "partly"
+          ],
+          "note": "gateway idea without the router or subnet",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "addr-negated",
+          "expected_grade": 0,
+          "expected_points": [
+            "missed",
+            "missed"
+          ],
+          "note": "uses the words but says the opposite",
+          "stand_in_grade": 4,
+          "stand_in_points": [
+            "met",
+            "partly"
+          ]
+        },
+        {
+          "case": "addr-word-salad",
+          "expected_grade": 0,
+          "expected_points": [
+            "missed",
+            "missed"
+          ],
+          "note": "keywords with no statement",
+          "stand_in_grade": 3,
+          "stand_in_points": [
+            "met",
+            "missed"
+          ]
+        },
+        {
+          "case": "prot-paraphrase",
+          "expected_grade": 5,
+          "expected_points": [
+            "met",
+            "met"
+          ],
+          "note": "right, in other words",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "prot-handshake-unnamed",
+          "expected_grade": 1,
+          "expected_points": [
+            "partly",
+            "missed"
+          ],
+          "note": "names the handshake but not its steps; no UDP",
+          "stand_in_grade": 3,
+          "stand_in_points": [
+            "met",
+            "missed"
+          ]
+        },
+        {
+          "case": "prot-swapped",
+          "expected_grade": 0,
+          "expected_points": [
+            "missed",
+            "missed"
+          ],
+          "note": "the two protocols swapped",
+          "stand_in_grade": 3,
+          "stand_in_points": [
+            "met",
+            "missed"
+          ]
+        },
+        {
+          "case": "prot-thin",
+          "expected_grade": 1,
+          "expected_points": [
+            "partly",
+            "missed"
+          ],
+          "note": "a hint of the handshake; speed is not the point",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "sec-paraphrase",
+          "expected_grade": 5,
+          "expected_points": [
+            "met",
+            "met"
+          ],
+          "note": "right, in other words",
+          "stand_in_grade": 3,
+          "stand_in_points": [
+            "missed",
+            "met"
+          ]
+        },
+        {
+          "case": "sec-wrong",
+          "expected_grade": 0,
+          "expected_points": [
+            "missed",
+            "missed"
+          ],
+          "note": "uses the words, wrong ideas",
+          "stand_in_grade": 1,
+          "stand_in_points": [
+            "missed",
+            "partly"
+          ]
+        },
+        {
+          "case": "trbl-paraphrase",
+          "expected_grade": 5,
+          "expected_points": [
+            "met",
+            "met"
+          ],
+          "note": "right, in other words",
+          "stand_in_grade": 1,
+          "stand_in_points": [
+            "missed",
+            "partly"
+          ]
+        },
+        {
+          "case": "trbl-tool-only",
+          "expected_grade": 1,
+          "expected_points": [
+            "missed",
+            "partly"
+          ],
+          "note": "names the tool, not what it shows",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "trbl-dns-wrong-tool",
+          "expected_grade": 3,
+          "expected_points": [
+            "met",
+            "missed"
+          ],
+          "note": "right cause, wrong tool",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "imp-paraphrase",
+          "expected_grade": 5,
+          "expected_points": [
+            "met",
+            "met"
+          ],
+          "note": "right, in other words",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "imp-swapped",
+          "expected_grade": 0,
+          "expected_points": [
+            "missed",
+            "missed"
+          ],
+          "note": "the chambers swapped",
+          "stand_in_grade": 3,
+          "stand_in_points": [
+            "met",
+            "missed"
+          ]
+        },
+        {
+          "case": "imp-house-only",
+          "expected_grade": 3,
+          "expected_points": [
+            "met",
+            "missed"
+          ],
+          "note": "House only",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "first-list",
+          "expected_grade": 4,
+          "expected_points": [
+            "met",
+            "met",
+            "partly"
+          ],
+          "note": "a bare list; religion named without establishment or exercise",
+          "stand_in_grade": 2,
+          "stand_in_points": [
+            "met",
+            "missed",
+            "missed"
+          ]
+        },
+        {
+          "case": "first-religion-half",
+          "expected_grade": 1,
+          "expected_points": [
+            "missed",
+            "missed",
+            "partly"
+          ],
+          "note": "establishment only",
+          "stand_in_grade": 2,
+          "stand_in_points": [
+            "missed",
+            "missed",
+            "met"
+          ]
+        },
+        {
+          "case": "first-paraphrase",
+          "expected_grade": 4,
+          "expected_points": [
+            "met",
+            "met",
+            "partly"
+          ],
+          "note": "right in plain words; free exercise not mentioned",
+          "stand_in_grade": 0,
+          "stand_in_points": [
+            "missed",
+            "missed",
+            "missed"
+          ]
+        }
+      ],
+      "exact": 21,
+      "label": "stand-in grader (keyword overlap, not a model) vs hand-written expected grades",
+      "mean_abs_error": 1.3,
+      "n": 40,
+      "name": "standin-vs-expected-grades",
+      "over_credit": 7,
+      "points_agree": 56,
+      "points_n": 86,
+      "result": "21/40 exact, 26/40 within one grade; 56/86 marking points agree",
+      "under_credit": 12,
+      "within_one": 26
+    },
+    {
+      "label": "code score on synthetic replays (hand-written) of a grader red-team set vs the expected score",
+      "matches": 21,
+      "mismatches": [],
+      "n": 21,
+      "name": "grader-red-team",
+      "result": "21/21 as expected"
+    }
+  ],
+  "tool": "drill eval"
+}

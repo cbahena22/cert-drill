@@ -1,0 +1,34 @@
+name = "networking-basics"
+description = "Self-written notes on addressing, protocols, security and troubleshooting. Addresses are the documentation ranges."
+
+[[domains]]
+name = "Addressing"
+weight = 30
+
+[[domains]]
+name = "Protocols"
+weight = 30
+
+[[domains]]
+name = "Security"
+weight = 20
+
+[[domains]]
+name = "Troubleshooting"
+weight = 20
+
+[[sources]]
+path = "sources/addressing.md"
+source_license = "self-written"
+
+[[sources]]
+path = "sources/protocols.md"
+source_license = "self-written"
+
+[[sources]]
+path = "sources/security.md"
+source_license = "self-written"
+
+[[sources]]
+path = "sources/troubleshooting.md"
+source_license = "self-written"

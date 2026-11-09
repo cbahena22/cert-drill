@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cert-drill"
+version = "0.1.0"
+description = "Drill for any exam from your own notes: generated questions with checked citations, spaced repetition, and graded free-text answers."
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.optional-dependencies]
+live = ["anthropic"]
+
+[project.scripts]
+drill = "cert_drill.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cert_drill = ["data/**/*"]

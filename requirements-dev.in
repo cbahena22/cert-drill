@@ -1,0 +1,6 @@
+pytest
+hypothesis
+pip-audit
+bandit
+setuptools
+build
